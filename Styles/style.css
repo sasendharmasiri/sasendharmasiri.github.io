@@ -12,7 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 /* Custom Scroll Bar CSS */
 ::-webkit-scrollbar {
     width: 10px;
@@ -27,7 +26,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--hover-color);
+    background: var(--error-color);
 }
 
 body{
@@ -118,24 +117,16 @@ nav.sticky .menu-btn{
   color: #fff;
 }
 
-/* home section styling 
+/*home section styling */
 .home{
   height: 100vh;
   width: 100%;
   background: url("Images/background.png") no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;*/
-.home{
-  font-family: 'Ubuntu', sans-serif;
-}
-
-.home .home-content .bg-image{
-  height: 60vh;
-  width: 100%;
-  background-size: cover;
   background-attachment: fixed;
-  background-position: center;
+
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .home .home-content{
@@ -186,7 +177,6 @@ nav.sticky .menu-btn{
 .home .button button:hover{
   border-color: var(--border-color);
   background-color: var(--hover-color);
-  color: #4070f4;
 }
 
 /* About Section Styling */
@@ -332,11 +322,111 @@ section .button button:hover{
   color: var(--text-color);
 }
 
+/*Projects*/
+.projects .boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.projects .boxes .box{
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+  color: var(--text-color);
+  background: var(--secondary-color);
+  cursor: pointer;
+}
+
+.projects .boxes .box:hover{
+  background: var(--accent-color);
+  color: #fff;
+}
+.projects .boxes .box .project-img{
+  height: 200px;
+  width: 321px;
+  background: var(--accent-color);
+  border-radius: 7px;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+
+.projects .boxes .box .project-img img{
+  height: 200px;
+  width: 321px;
+  text-align: center;
+  border-radius: 7px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.projects .boxes .box .project-img img:hover{
+  transform: scale(1.3);
+}
+
+.boxes .box:hover .project-img{
+  background-color: #fff;
+  color: var(--accent-color);
+}
+
+.projects .boxes .boxe .categories{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.projects .boxes .box .categories p{
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 1000px;
+  color: var(--text-color);
+  background: var(--accent-color);
+  margin-bottom: 10px;
+  margin-top: 6px;
+  padding: 6px auto;
+  max-width: 100px;
+}
+
+.projects .boxes .box:hover .topic,
+.projects .boxes .box:hover p{
+  color: var(--border-color);
+  transition: all 0.4s ease;
+}
+
+.projects .boxes .box:hover .categories p{
+  background: var(--text-color);
+}
+
+.projects .projects-view{
+  display: flex;
+  justify-content: center;
+}
+
+.projects-view .projects-view-btn{
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 25px;
+  font-weight: 400;
+  background: var(--accent-color);
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+
+.projects-view .projects-view-btn:hover{
+  background: var(--hover-color);
+}
+
 /* My Services CSS */
 .services .boxes{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .services .boxes .box{
   margin: 20px 0;
@@ -372,13 +462,10 @@ section .button button:hover{
 }
 .services .boxes .box:hover .topic,
 .services .boxes .box:hover p{
-  color: var(--text-color);
+  color: var(--border-color);
   transition: all 0.4s ease;
 }
-.services .boxes .box:hover .topic,
-.services .boxes .box:hover p{
-  color: #fff;
-}
+
 /* Contact Me CSS */
 .contact{
   background: var(--background-color);
@@ -428,13 +515,11 @@ footer .text span a:hover{
   z-index: 100;
 }
 
-/*
 .scroll-container {
   height: 100vh;
   overflow-y: scroll; 
   scroll-snap-type: y mandatory; 
 }
-*/
 
 .scroll-section {
   height: 100vh;  /* Each section takes full viewport height */
